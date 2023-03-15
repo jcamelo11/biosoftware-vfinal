@@ -23,19 +23,19 @@
                 <div class="row">
                     <div class="col-8">
                     <div class="numbers">
-                        <p class="text-sm mb-0 text-uppercase font-weight-bold">Today's Money</p>
+                        <p class="text-sm mb-0 text-uppercase font-weight-bold">Avistamientos</p>
                         <h5 class="font-weight-bolder">
                         $53,000
                         </h5>
                         <p class="mb-0">
-                        <span class="text-success text-sm font-weight-bolder">+55%</span>
-                        since yesterday
+                        <span class="text-success text-sm font-weight-bolder">+55</span>
+                        este mes
                         </p>
                     </div>
                     </div>
                     <div class="col-4 text-end">
-                    <div class="icon icon-shape bg-gradient-success shadow-success text-center rounded-circle">
-                        <i class="ni ni-money-coins text-lg opacity-10" aria-hidden="true"></i>
+                    <div class="icon icon-shape bg-gradient-info shadow-success text-center rounded-circle">
+                        <i class="fas fa-eye text-lg opacity-10" aria-hidden="true"></i>
                     </div>
                     </div>
                 </div>
@@ -48,19 +48,19 @@
                 <div class="row">
                     <div class="col-8">
                     <div class="numbers">
-                        <p class="text-sm mb-0 text-uppercase font-weight-bold">Today's Users</p>
+                        <p class="text-sm mb-0 text-uppercase font-weight-bold">Especies</p>
                         <h5 class="font-weight-bolder">
                         2,300
                         </h5>
                         <p class="mb-0">
-                        <span class="text-success text-sm font-weight-bolder">+3%</span>
-                        since last week
+                        <span class="text-success text-sm font-weight-bolder">+3</span>
+                        especies nuevas
                         </p>
                     </div>
                     </div>
                     <div class="col-4 text-end">
                     <div class="icon icon-shape bg-gradient-danger shadow-danger text-center rounded-circle">
-                        <i class="ni ni-world text-lg opacity-10" aria-hidden="true"></i>
+                        <i class="fas fa-crow text-lg opacity-10" aria-hidden="true"></i>
                     </div>
                     </div>
                 </div>
@@ -73,19 +73,18 @@
                 <div class="row">
                     <div class="col-8">
                     <div class="numbers">
-                        <p class="text-sm mb-0 text-uppercase font-weight-bold">New Clients</p>
+                        <p class="text-sm mb-0 text-uppercase font-weight-bold">Areas</p>
                         <h5 class="font-weight-bolder">
-                        +3,462
+                        7
                         </h5>
                         <p class="mb-0">
-                        <span class="text-danger text-sm font-weight-bolder">-2%</span>
-                        since last quarter
+                        Areas de avistamientos
                         </p>
                     </div>
                     </div>
                     <div class="col-4 text-end">
                     <div class="icon icon-shape bg-gradient-success shadow-success text-center rounded-circle">
-                        <i class="ni ni-paper-diploma text-lg opacity-10" aria-hidden="true"></i>
+                        <i class="fas fa-globe-americas text-lg opacity-10" aria-hidden="true"></i>
                     </div>
                     </div>
                 </div>
@@ -98,18 +97,18 @@
                 <div class="row">
                     <div class="col-8">
                     <div class="numbers">
-                        <p class="text-sm mb-0 text-uppercase font-weight-bold">Sales</p>
+                        <p class="text-sm mb-0 text-uppercase font-weight-bold">Usuarios</p>
                         <h5 class="font-weight-bolder">
-                        $103,430
+                        10
                         </h5>
                         <p class="mb-0">
-                        <span class="text-success text-sm font-weight-bolder">+5%</span> than last month
+                        <span class="text-success text-sm font-weight-bolder">+5</span> usuarios nuevos
                         </p>
                     </div>
                     </div>
                     <div class="col-4 text-end">
                     <div class="icon icon-shape bg-gradient-warning shadow-warning text-center rounded-circle">
-                        <i class="ni ni-cart text-lg opacity-10" aria-hidden="true"></i>
+                        <i class="fas fa-users text-lg opacity-10" aria-hidden="true"></i>
                     </div>
                     </div>
                 </div>
@@ -121,10 +120,10 @@
             <div class="col-lg-7 mb-lg-0 mb-4">
             <div class="card z-index-2 h-100">
                 <div class="card-header pb-0 pt-3 bg-transparent">
-                <h6 class="text-capitalize">Sales overview</h6>
+                <h6 class="text-capitalize">Avistamientos por area</h6>
                 <p class="text-sm mb-0">
                     <i class="fa fa-arrow-up text-success"></i>
-                    <span class="font-weight-bold">4% more</span> in 2021
+                    <span class="font-weight-bold">+4</span> este año
                 </p>
                 </div>
                 <div class="card-body p-3">
@@ -138,7 +137,7 @@
             <div class="card card-carousel overflow-hidden h-100 p-0">
                 <div id="carouselExampleCaptions" class="carousel slide h-100" data-bs-ride="carousel">
                 <div class="carousel-inner border-radius-lg h-100">
-                    <div class="carousel-item h-100 active" style="background-image: url('{{ asset('img/carousel-1.jpg') }}');
+                    <div class="carousel-item h-100 active" style="background-image: url('{{ asset('img/pajaro-1.jpg') }}');
         background-size: cover;">
                     <div class="carousel-caption d-none d-md-block bottom-0 text-start start-0 ms-5">
                         <div class="icon icon-shape icon-sm bg-white text-center border-radius-md mb-3">
@@ -148,7 +147,7 @@
                         <p>There’s nothing I really wanted to do in life that I wasn’t able to get good at.</p>
                     </div>
                     </div>
-                    <div class="carousel-item h-100" style="background-image: url('{{ asset('img/carousel-2.jpg') }}');
+                    <div class="carousel-item h-100" style="background-image: url('{{ asset('img/pajaro-2.jpg') }}');
         background-size: cover;">
                     <div class="carousel-caption d-none d-md-block bottom-0 text-start start-0 ms-5">
                         <div class="icon icon-shape icon-sm bg-white text-center border-radius-md mb-3">
@@ -158,7 +157,7 @@
                         <p>That’s my skill. I’m not really specifically talented at anything except for the ability to learn.</p>
                     </div>
                     </div>
-                    <div class="carousel-item h-100" style="background-image: url('{{ asset('img/carousel-3.jpg') }}');
+                    <div class="carousel-item h-100" style="background-image: url('{{ asset('img/pajaro-3.jpg') }}');
         background-size: cover;">
                     <div class="carousel-caption d-none d-md-block bottom-0 text-start start-0 ms-5">
                         <div class="icon icon-shape icon-sm bg-white text-center border-radius-md mb-3">
@@ -183,159 +182,102 @@
         </div>
         <div class="row mt-4">
             <div class="col-lg-7 mb-lg-0 mb-4">
-            <div class="card ">
-                <div class="card-header pb-0 p-3">
-                <div class="d-flex justify-content-between">
-                    <h6 class="mb-2">Sales by Country</h6>
-                </div>
-                </div>
-                <div class="table-responsive">
-                <table class="table align-items-center ">
-                    <tbody>
-                    <tr>
-                        <td class="w-30">
-                        <div class="d-flex px-2 py-1 align-items-center">
-                            <div>
-                            <img src="{{ asset('img/icons/flags/US.png') }}" alt="Country flag">
-                            </div>
-                            <div class="ms-4">
-                            <p class="text-xs font-weight-bold mb-0">Country:</p>
-                            <h6 class="text-sm mb-0">United States</h6>
+                <div class="card ">
+                    <div class="card-header pb-0 p-3">
+                        <div class="d-flex align-items-center">
+                            <button class="btn btn-icon-only btn-rounded btn-outline-success mb-0 me-3 btn-sm d-flex align-items-center justify-content-center"><i class="fas fa-arrow-up"></i></button>
+                            <div class="d-flex flex-column">
+                            <h6 class="mb-1 text-dark text-sm">Especies más vista</h6>
                             </div>
                         </div>
-                        </td>
-                        <td>
-                        <div class="text-center">
-                            <p class="text-xs font-weight-bold mb-0">Sales:</p>
-                            <h6 class="text-sm mb-0">2500</h6>
                         </div>
-                        </td>
-                        <td>
-                        <div class="text-center">
-                            <p class="text-xs font-weight-bold mb-0">Value:</p>
-                            <h6 class="text-sm mb-0">$230,900</h6>
-                        </div>
-                        </td>
-                        <td class="align-middle text-sm">
-                        <div class="col text-center">
-                            <p class="text-xs font-weight-bold mb-0">Bounce:</p>
-                            <h6 class="text-sm mb-0">29.9%</h6>
-                        </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="w-30">
-                        <div class="d-flex px-2 py-1 align-items-center">
-                            <div>
-                            <img src="{{ asset('img/icons/flags/DE.png') }}" alt="Country flag">
-                            </div>
-                            <div class="ms-4">
-                            <p class="text-xs font-weight-bold mb-0">Country:</p>
-                            <h6 class="text-sm mb-0">Germany</h6>
-                            </div>
-                        </div>
-                        </td>
-                        <td>
-                        <div class="text-center">
-                            <p class="text-xs font-weight-bold mb-0">Sales:</p>
-                            <h6 class="text-sm mb-0">3.900</h6>
-                        </div>
-                        </td>
-                        <td>
-                        <div class="text-center">
-                            <p class="text-xs font-weight-bold mb-0">Value:</p>
-                            <h6 class="text-sm mb-0">$440,000</h6>
-                        </div>
-                        </td>
-                        <td class="align-middle text-sm">
-                        <div class="col text-center">
-                            <p class="text-xs font-weight-bold mb-0">Bounce:</p>
-                            <h6 class="text-sm mb-0">40.22%</h6>
-                        </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="w-30">
-                        <div class="d-flex px-2 py-1 align-items-center">
-                            <div>
-                            <img src="{{ asset('img/icons/flags/GB.png') }}" alt="Country flag">
-                            </div>
-                            <div class="ms-4">
-                            <p class="text-xs font-weight-bold mb-0">Country:</p>
-                            <h6 class="text-sm mb-0">Great Britain</h6>
+                    <div class="table-responsive">
+                        <table class="table align-items-center ">
+                            <tbody>
+                            <tr>
+                                <td class="w-30">
+                                <div class="d-flex px-2 py-1 align-items-center">
+                                    <div>
+                                    <img src="{{ asset('img/pajaro-1.jpg') }}" class="avatar avatar-xl  me-3 ">
+                                    </div>
+                                    <div class="ms-4">
+                                    <p class="text-xs font-weight-bold mb-0">Nombre común:</p>
+                                    <h6 class="text-sm mb-0">Pajaro carpintero</h6>
+                                    </div>
+                                </div>
+                                </td>
+                                <td>
+                                <div class="text-center">
+                                    <p class="text-xs font-weight-bold mb-0">Nombre cientifico</p>
+                                    <h6 class="text-sm mb-0">Picidae</h6>
+                                </div>
+                                </td>
+                                <td>
+                                <div class="text-center">
+                                    <p class="text-xs font-weight-bold mb-0">Avistamientos:</p>
+                                    <h6 class="text-sm mb-0 text-success">230,900</h6>
+                                </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="card-header pb-0 p-3">
+                        <div class="d-flex align-items-center">
+                            <button class="btn btn-icon-only btn-rounded btn-outline-danger mb-0 me-3 btn-sm d-flex align-items-center justify-content-center"><i class="fas fa-arrow-down"></i></button>
+                            <div class="d-flex flex-column">
+                            <h6 class="mb-1 text-dark text-sm">Especies menos vista</h6>
                             </div>
                         </div>
-                        </td>
-                        <td>
-                        <div class="text-center">
-                            <p class="text-xs font-weight-bold mb-0">Sales:</p>
-                            <h6 class="text-sm mb-0">1.400</h6>
                         </div>
-                        </td>
-                        <td>
-                        <div class="text-center">
-                            <p class="text-xs font-weight-bold mb-0">Value:</p>
-                            <h6 class="text-sm mb-0">$190,700</h6>
-                        </div>
-                        </td>
-                        <td class="align-middle text-sm">
-                        <div class="col text-center">
-                            <p class="text-xs font-weight-bold mb-0">Bounce:</p>
-                            <h6 class="text-sm mb-0">23.44%</h6>
-                        </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="w-30">
-                        <div class="d-flex px-2 py-1 align-items-center">
-                            <div>
-                            <img src="{{ asset('img/icons/flags/BR.png') }}" alt="Country flag">
-                            </div>
-                            <div class="ms-4">
-                            <p class="text-xs font-weight-bold mb-0">Country:</p>
-                            <h6 class="text-sm mb-0">Brasil</h6>
-                            </div>
-                        </div>
-                        </td>
-                        <td>
-                        <div class="text-center">
-                            <p class="text-xs font-weight-bold mb-0">Sales:</p>
-                            <h6 class="text-sm mb-0">562</h6>
-                        </div>
-                        </td>
-                        <td>
-                        <div class="text-center">
-                            <p class="text-xs font-weight-bold mb-0">Value:</p>
-                            <h6 class="text-sm mb-0">$143,960</h6>
-                        </div>
-                        </td>
-                        <td class="align-middle text-sm">
-                        <div class="col text-center">
-                            <p class="text-xs font-weight-bold mb-0">Bounce:</p>
-                            <h6 class="text-sm mb-0">32.14%</h6>
-                        </div>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
+                    <div class="table-responsive">
+                        <table class="table align-items-center ">
+                            <tbody>
+                            <tr>
+                                <td class="w-30">
+                                <div class="d-flex px-2 py-1 align-items-center">
+                                    <div>
+                                    <img src="{{ asset('img/pajaro-2.jpg') }}" class="avatar avatar-xl  me-3 ">
+                                    </div>
+                                    <div class="ms-4">
+                                    <p class="text-xs font-weight-bold mb-0">Nombre común:</p>
+                                    <h6 class="text-sm mb-0">Pajaro carpintero</h6>
+                                    </div>
+                                </div>
+                                </td>
+                                <td>
+                                <div class="text-center">
+                                    <p class="text-xs font-weight-bold mb-0">Nombre cientifico</p>
+                                    <h6 class="text-sm mb-0">Picidae</h6>
+                                </div>
+                                </td>
+                                <td>
+                                <div class="text-center">
+                                    <p class="text-xs font-weight-bold mb-0">Avistamientos:</p>
+                                    <h6 class="text-sm mb-0 text-danger">230,900</h6>
+                                </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
-            </div>
+            
             <div class="col-lg-5">
             <div class="card">
                 <div class="card-header pb-0 p-3">
-                <h6 class="mb-0">Categories</h6>
+                <h6 class="mb-0">Areas</h6>
                 </div>
                 <div class="card-body p-3">
                 <ul class="list-group">
                     <li class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
                     <div class="d-flex align-items-center">
                         <div class="icon icon-shape icon-sm me-3 bg-gradient-dark shadow text-center">
-                        <i class="ni ni-mobile-button text-white opacity-10"></i>
+                        <i class="fas fa-users text-white opacity-10"></i>
                         </div>
                         <div class="d-flex flex-column">
-                        <h6 class="mb-1 text-dark text-sm">Devices</h6>
-                        <span class="text-xs">250 in stock, <span class="font-weight-bold">346+ sold</span></span>
+                        <h6 class="mb-1 text-dark text-sm">Antropica</h6>
                         </div>
                     </div>
                     <div class="d-flex">
@@ -345,11 +287,10 @@
                     <li class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
                     <div class="d-flex align-items-center">
                         <div class="icon icon-shape icon-sm me-3 bg-gradient-dark shadow text-center">
-                        <i class="ni ni-tag text-white opacity-10"></i>
+                        <i class="fas fa-fish text-white opacity-10"></i>
                         </div>
                         <div class="d-flex flex-column">
-                        <h6 class="mb-1 text-dark text-sm">Tickets</h6>
-                        <span class="text-xs">123 closed, <span class="font-weight-bold">15 open</span></span>
+                        <h6 class="mb-1 text-dark text-sm">Acuicultura</h6>
                         </div>
                     </div>
                     <div class="d-flex">
@@ -359,11 +300,10 @@
                     <li class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
                     <div class="d-flex align-items-center">
                         <div class="icon icon-shape icon-sm me-3 bg-gradient-dark shadow text-center">
-                        <i class="ni ni-box-2 text-white opacity-10"></i>
+                        <i class="fas fa-paw text-white opacity-10"></i>
                         </div>
                         <div class="d-flex flex-column">
-                        <h6 class="mb-1 text-dark text-sm">Error logs</h6>
-                        <span class="text-xs">1 is active, <span class="font-weight-bold">40 closed</span></span>
+                        <h6 class="mb-1 text-dark text-sm">Esp. Menores</h6>
                         </div>
                     </div>
                     <div class="d-flex">
@@ -373,11 +313,49 @@
                     <li class="list-group-item border-0 d-flex justify-content-between ps-0 border-radius-lg">
                     <div class="d-flex align-items-center">
                         <div class="icon icon-shape icon-sm me-3 bg-gradient-dark shadow text-center">
-                        <i class="ni ni-satisfied text-white opacity-10"></i>
+                        <i class="fas fa-horse text-white opacity-10"></i>
                         </div>
                         <div class="d-flex flex-column">
-                        <h6 class="mb-1 text-dark text-sm">Happy users</h6>
-                        <span class="text-xs font-weight-bold">+ 430</span>
+                        <h6 class="mb-1 text-dark text-sm">Ganadería</h6>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <button class="btn btn-link btn-icon-only btn-rounded btn-sm text-dark icon-move-right my-auto"><i class="ni ni-bold-right" aria-hidden="true"></i></button>
+                    </div>
+                    </li>
+                    <li class="list-group-item border-0 d-flex justify-content-between ps-0 border-radius-lg">
+                    <div class="d-flex align-items-center">
+                        <div class="icon icon-shape icon-sm me-3 bg-gradient-dark shadow text-center">
+                        <i class="fas fa-seedling text-white opacity-10"></i>
+                        </div>
+                        <div class="d-flex flex-column">
+                        <h6 class="mb-1 text-dark text-sm">Vivero</h6>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <button class="btn btn-link btn-icon-only btn-rounded btn-sm text-dark icon-move-right my-auto"><i class="ni ni-bold-right" aria-hidden="true"></i></button>
+                    </div>
+                    </li>
+                    <li class="list-group-item border-0 d-flex justify-content-between ps-0 border-radius-lg">
+                    <div class="d-flex align-items-center">
+                        <div class="icon icon-shape icon-sm me-3 bg-gradient-dark shadow text-center">
+                        <i class="fas fa-tractor text-white opacity-10"></i>
+                        </div>
+                        <div class="d-flex flex-column">
+                        <h6 class="mb-1 text-dark text-sm">Cultivo</h6>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <button class="btn btn-link btn-icon-only btn-rounded btn-sm text-dark icon-move-right my-auto"><i class="ni ni-bold-right" aria-hidden="true"></i></button>
+                    </div>
+                    </li>
+                    <li class="list-group-item border-0 d-flex justify-content-between ps-0 border-radius-lg">
+                    <div class="d-flex align-items-center">
+                        <div class="icon icon-shape icon-sm me-3 bg-gradient-dark shadow text-center">
+                        <i class="fas fa-tree text-white opacity-10"></i>
+                        </div>
+                        <div class="d-flex flex-column">
+                        <h6 class="mb-1 text-dark text-sm">Bosque</h6>
                         </div>
                     </div>
                     <div class="d-flex">

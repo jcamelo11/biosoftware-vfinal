@@ -113,8 +113,9 @@
         </div>
     </div>
   <!--   Core JS Files   -->
-  <script src="{{ asset('js/core/bootstrap.min.js') }}"></script>
   <script src="{{ asset('js/core/popper.min.js') }}"></script>
+  <script src="{{ asset('js/core/bootstrap.min.js') }}"></script>
+
   <script src="{{ asset('js/plugins/perfect-scrollbar.min.js') }}"></script>
   <script src="{{ asset('js/plugins/smooth-scrollbar.min.js') }}"></script>
   <script src="{{ asset('js/plugins/chartjs.min.js') }}"></script>
@@ -129,9 +130,9 @@
     new Chart(ctx1, {
       type: "line",
       data: {
-        labels: ["Antropica", "Vivero", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+        labels: ["Antropica", "Acuicultura", "Esp. Menores", "Ganadería", "Vivero", "Cultivo", "Bosque"],
         datasets: [{
-          label: "Mobile apps",
+          label: "Avistamientos",
           tension: 0.4,
           borderWidth: 0,
           pointRadius: 0,
