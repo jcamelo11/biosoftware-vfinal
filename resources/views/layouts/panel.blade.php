@@ -19,6 +19,7 @@
   <link href="{{ asset('css/nucleo-svg.css') }}" rel="stylesheet" />
   <!-- CSS Files -->
   <link id="pagestyle" href="{{ asset('css/argon-dashboard.css?v=2.0.4') }}" rel="stylesheet" />
+  <link href="{{ asset('css/dropzone.min.css') }}" rel="stylesheet">
 </head>
 
 <body class="g-sidenav-show   bg-gray-100">
@@ -115,7 +116,7 @@
   <!--   Core JS Files   -->
   <script src="{{ asset('js/core/popper.min.js') }}"></script>
   <script src="{{ asset('js/core/bootstrap.min.js') }}"></script>
-
+  <script src="{{ asset('js/plugins/dropzone.min.js') }}"></script>
   <script src="{{ asset('js/plugins/perfect-scrollbar.min.js') }}"></script>
   <script src="{{ asset('js/plugins/smooth-scrollbar.min.js') }}"></script>
   <script src="{{ asset('js/plugins/chartjs.min.js') }}"></script>

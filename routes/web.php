@@ -20,3 +20,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/aves', [App\Http\Controllers\AveController::class, 'index'])->name('aves');
+Route::get('/aves/create', [App\Http\Controllers\AveController::class, 'create'])->name('aves.create');
+Route::post('/aves', [App\Http\Controllers\AveController::class, 'store'])->name('aves.store');
+Route::put('/aves/{ave}', 'AveController@update')->name('aves.update');
+
+

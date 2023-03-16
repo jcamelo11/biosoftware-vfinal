@@ -53,8 +53,7 @@
                         2,300
                         </h5>
                         <p class="mb-0">
-                        <span class="text-success text-sm font-weight-bolder">+3</span>
-                        especies nuevas
+                        Total
                         </p>
                     </div>
                     </div>
@@ -78,7 +77,7 @@
                         7
                         </h5>
                         <p class="mb-0">
-                        Areas de avistamientos
+                        Total
                         </p>
                     </div>
                     </div>
@@ -99,10 +98,10 @@
                     <div class="numbers">
                         <p class="text-sm mb-0 text-uppercase font-weight-bold">Usuarios</p>
                         <h5 class="font-weight-bolder">
-                        10
+                        {{ $userCount }}
                         </h5>
                         <p class="mb-0">
-                        <span class="text-success text-sm font-weight-bolder">+5</span> usuarios nuevos
+                        Total
                         </p>
                     </div>
                     </div>
@@ -123,7 +122,7 @@
                 <h6 class="text-capitalize">Avistamientos por area</h6>
                 <p class="text-sm mb-0">
                     <i class="fa fa-arrow-up text-success"></i>
-                    <span class="font-weight-bold">+4</span> este año
+                    Total
                 </p>
                 </div>
                 <div class="card-body p-3">
