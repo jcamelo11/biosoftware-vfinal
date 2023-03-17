@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\User;
+use App\Models\Ave;
 
 use Illuminate\Http\Request;
 
@@ -25,7 +26,8 @@ class HomeController extends Controller
     public function index()
     {
         $userCount = User::count();
-        return view('home', ['userCount' => $userCount]);
+        $aveCount = Ave::count();
+        return view('home', ['userCount' => $userCount], ['aveCount' => $aveCount]);
        
     }
 }

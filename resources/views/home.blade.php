@@ -2,21 +2,7 @@
 
 @section('content')
     <div class="row">
-        <div class="col-md-12 mb-4">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
-                </div>
-            </div>
-        </div>
+        
         <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
             <div class="card">
                 <div class="card-body p-3">
@@ -50,7 +36,7 @@
                     <div class="numbers">
                         <p class="text-sm mb-0 text-uppercase font-weight-bold">Especies</p>
                         <h5 class="font-weight-bolder">
-                        2,300
+                        {{ $aveCount }}
                         </h5>
                         <p class="mb-0">
                         Total

@@ -37,9 +37,13 @@
                             <td class="text-sm text-center font-weight-bold">{{ $ave->nombre_comun }}</td>
                             <td class="text-sm text-center font-weight-bold">{{ $ave->nombre_cientifico }}</td>
                             <td class="align-middle  text-center">
-                              <a class="btn btn-link text-dark px-2 mb-0" href="#"><i class="fas fa-eye"></i></a>
-                              <a class="btn btn-link text-dark px-2 mb-0" href="#"><i class="fas fa-pencil-alt text-dark me-2" aria-hidden="true"></i></a>
-                              <a class="btn btn-link text-danger text-gradient px-2 mb-0" href="#"><i class="far fa-trash-alt me-2"></i></a>
+                              <a class="btn btn-link text-dark px-2 mb-0" href="{{ route('aves.show', $ave->id) }}"><i class="fas fa-eye"></i></a>
+                              <a class="btn btn-link text-dark px-2 mb-0" href="{{ route('aves.edit', $ave->id) }}"><i class="fas fa-pencil-alt text-dark me-2" aria-hidden="true"></i></a>
+                              <a class="btn btn-link text-danger text-gradient px-2 mb-0"  onclick="event.preventDefault(); document.getElementById('delete-form').submit();" href="{{ route('aves.destroy', $ave->id) }}"><i class="far fa-trash-alt me-2"></i></a>
+                              <form id="delete-form" action="{{ route('aves.destroy', $ave->id) }}" method="POST" style="display: none;">
+                                  @csrf
+                                  @method('DELETE')
+                              </form>
                             </td>
                         </tr>
                         @endforeach  
