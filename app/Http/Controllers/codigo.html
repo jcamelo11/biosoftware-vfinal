@@ -1,0 +1,52 @@
+// avistamientosPorArea
+
+$avistamientosPorArea = Avistamiento::select('area_id', DB::raw('count(*) as total'))
+            ->groupBy('area_id')
+            ->get();
+
+avistamiento por año
+
+Para obtener el número de avistamientos por año, podrías utilizar una consulta similar a la que usamos anteriormente para obtener los avistamientos por área, pero en este caso, en lugar de agrupar por área, agruparías por el año de la fecha del avistamiento.
+
+Podrías hacerlo de la siguiente manera:
+
+En tu controlador, podrías agregar una nueva variable que obtenga los avistamientos agrupados por año:
+
+public function show($id)
+{
+    $ave = Ave::findOrFail($id);
+    $areas = Area::all();
+    $avistamientos = Avistamiento::all();
+
+    $avistamientosPorArea = Avistamiento::select('area_id', 'ave_id', DB::raw('count(*) as total'))
+        ->where('ave_id', $id)
+        ->groupBy('area_id', 'ave_id')
+        ->get();
+
+    $avistamientosPorAnio = Avistamiento::select(DB::raw('YEAR(fecha) as anio'), DB::raw('count(*) as total'))
+        ->where('ave_id', $id)
+        ->groupBy(DB::raw('YEAR(fecha)'))
+        ->get();
+
+    return view('aves.show', compact('ave', 'areas', 'avistamientosPorArea', 'avistamientosPorAnio'));
+}
+
+
+En tu vista, podrías mostrar los avistamientos por año en una tabla similar a la que muestras para los avistamientos por área
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Año</th>
+            <th>Número de avistamientos</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach($avistamientosPorAnio as $avistamientoPorAnio)
+            <tr>
+                <td>{{ $avistamientoPorAnio->anio }}</td>
+                <td>{{ $avistamientoPorAnio->total }}</td>
+            </tr>
+        @endforeach
+    </tbody>
+</table>

@@ -31,7 +31,7 @@
 
     <main class="main-content position-relative border-radius-lg ">
         <!-- Navbar -->
-        @include('includes.panel.topnav')
+        
         <!-- End Navbar -->
         
         <div class="container-fluid py-4">

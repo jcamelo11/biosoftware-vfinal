@@ -1,6 +1,7 @@
 @extends('layouts.panel')
 
 @section('content')
+@include('includes.panel.topnav', ['title' => 'Dashboard'])
     <div class="row">
         
         <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
@@ -132,7 +133,7 @@
                         <p>There’s nothing I really wanted to do in life that I wasn’t able to get good at.</p>
                     </div>
                     </div>
-                    <div class="carousel-item h-100" style="background-image: url('{{ asset('img/pajaro-2.jpg') }}');
+                    <div class="carousel-item h-100" style="background-image: url('{{ asset('img/biopng') }}');
         background-size: cover;">
                     <div class="carousel-caption d-none d-md-block bottom-0 text-start start-0 ms-5">
                         <div class="icon icon-shape icon-sm bg-white text-center border-radius-md mb-3">
@@ -262,7 +263,7 @@
                         <i class="fas fa-users text-white opacity-10"></i>
                         </div>
                         <div class="d-flex flex-column">
-                        <h6 class="mb-1 text-dark text-sm">Antropica</h6>
+                        <h6 class="mb-1 text-dark text-sm">Antrópica</h6>
                         </div>
                     </div>
                     <div class="d-flex">

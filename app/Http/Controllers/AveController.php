@@ -1,8 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use App\Models\Ave;
+use App\Models\Area;
+use App\Models\Avistamiento;
 
 use Illuminate\Http\Request;
 
@@ -11,6 +14,10 @@ class AveController extends Controller
     public function index()
     {
         $aves = Ave::all();
+        $areas = Area::all();
+        $areas = Avistamiento::all();
+
+
         return view('aves.index', ['aves' => $aves]);
     }
 
@@ -92,8 +99,22 @@ class AveController extends Controller
     public function show($id)
     {
         $ave = Ave::findOrFail($id);
+        $areas = Area::all();
+        $avistamientos = Avistamiento::all();
 
-        return view('aves.show', compact('ave'));
+        //avistamiento total de cada ave
+        $avistamientosPorArea = Avistamiento::select('area_id', DB::raw('sum(numero_avistamientos) as total'))
+        ->where('ave_id', $id)
+        ->groupBy('area_id')
+        ->get();
+
+        // Obtener años distintos de los avistamientos
+        $anios = Avistamiento::select(DB::raw('YEAR(fecha) as year'))
+        ->where('ave_id', $id)
+        ->groupBy('year')
+        ->get();
+
+        return view('aves.show', compact('ave', 'areas', 'avistamientosPorArea', 'anios'));
     }
 
 

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AveController;
+use App\Http\Controllers\AvistamientoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,6 +30,10 @@ Route::get('/aves/{ave}/editar', [AveController::class, 'edit'])->name('aves.edi
 Route::put('/aves/{ave}', [AveController::class, 'update'])->name('aves.update');
 Route::delete('/aves/{ave}', [AveController::class, 'destroy'])->name('aves.destroy');
 Route::get('/aves/{ave}', [AveController::class, 'show'])->name('aves.show');
+
+
+Route::post('/avistamientos', [App\Http\Controllers\AvistamientoController::class, 'store'])->name('avistamientos.store');
+
 
 
 
