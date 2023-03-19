@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('img/apple-icon.png') }}">
+  <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('img/favicon.png') }}">
   <link rel="icon" type="image/png" href="{{ asset('img/favicon.png') }}">
   <title>
   {{ config('app.name') }}
@@ -20,6 +20,8 @@
   <!-- CSS Files -->
   <link id="pagestyle" href="{{ asset('css/argon-dashboard.css?v=2.0.4') }}" rel="stylesheet" />
   <link href="{{ asset('css/dropzone.min.css') }}" rel="stylesheet">
+  //sweetAlrt
+  
 </head>
 
 <body class="g-sidenav-show   bg-gray-100">
@@ -121,7 +123,8 @@
   <script src="{{ asset('js/plugins/smooth-scrollbar.min.js') }}"></script>
   <script src="{{ asset('js/plugins/chartjs.min.js') }}"></script>
   <script>
-    var ctx1 = document.getElementById("chart-line").getContext("2d");
+       
+  var ctx1 = document.getElementById("chart-line").getContext("2d");
 
     var gradientStroke1 = ctx1.createLinearGradient(0, 230, 0, 50);
 

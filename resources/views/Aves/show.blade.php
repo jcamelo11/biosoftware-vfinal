@@ -46,38 +46,16 @@
                                     </div>
                                     </div>
                                     <div class="col-8 mt-3 mx-auto text-center text-end">
-                                        <button class="btn btn-success mb-0" type="submit" href="#"><i class="fas fa-plus"></i>&nbsp;&nbsp;Nuevo avistamiento</button>
+                                        <button class="btn btn-success mb-0" type="submit" href="#"><i class="fas fa-save"></i>&nbsp;&nbsp;Guardar</button>
                                         
                                     </div>
                                 </form>    
                         </div>
                         <div class="row mt-5">
-                            <!-- <div class="col-6 d-flex align-items-center">
-                                <h6 class="mb-0 font-weight-bold">Total de avistamientos</h6>
-                                <div class="dropdown text-end">
-                                    <button class="btn bg-gradient-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Success
-                                    </button>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                        <li><a class="dropdown-item" href="#">Action</a></li>
-                                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                             -->
+                           
                              <div class="col-md-4 d-flex"><h6 class="mb-0 font-weight-bold">Total de avistamientos</h6>
                             </div>
-                             <div class="col-md-4 offset-md-4 "><div class="dropdown">
-                                    <button class="btn bg-gradient-success dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Success
-                                    </button>
-                                    <ul class="dropdown-menu text" aria-labelledby="dropdownMenuButton">
-                                        <li><a class="dropdown-item" href="#">Action</a></li>
-                                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                    </ul>
-                                </div></div>
+                            
                                
                             
                             

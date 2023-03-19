@@ -12,11 +12,10 @@
                     <div class="numbers">
                         <p class="text-sm mb-0 text-uppercase font-weight-bold">Avistamientos</p>
                         <h5 class="font-weight-bolder">
-                        $53,000
+                        {{ $avistamientosTotales }}
                         </h5>
                         <p class="mb-0">
-                        <span class="text-success text-sm font-weight-bolder">+55</span>
-                        este mes
+                        Total
                         </p>
                     </div>
                     </div>
@@ -120,52 +119,34 @@
             </div>
             </div>
             <div class="col-lg-5">
-            <div class="card card-carousel overflow-hidden h-100 p-0">
-                <div id="carouselExampleCaptions" class="carousel slide h-100" data-bs-ride="carousel">
-                <div class="carousel-inner border-radius-lg h-100">
-                    <div class="carousel-item h-100 active" style="background-image: url('{{ asset('img/pajaro-1.jpg') }}');
-        background-size: cover;">
-                    <div class="carousel-caption d-none d-md-block bottom-0 text-start start-0 ms-5">
-                        <div class="icon icon-shape icon-sm bg-white text-center border-radius-md mb-3">
-                        <i class="ni ni-camera-compact text-dark opacity-10"></i>
+                <div class="card card-carousel overflow-hidden h-100 p-0">
+                    <div id="carouselExampleCaptions" class="carousel slide h-100" data-bs-ride="carousel">
+                        <div class="carousel-inner border-radius-lg h-100">
+                            @foreach($aves as $ave)
+                            <div class="carousel-item h-100 @if($loop->first) active @endif" style="background-image: url('{{ asset('imagenes/aves/'.$ave->imagen) }}');
+                                background-size: cover;">
+                                <div class="carousel-caption d-none d-md-block bottom-0 text-start start-0 ms-5">
+                                    <div class="icon icon-shape icon-sm bg-white text-center border-radius-md mb-3">
+                                        <i class="ni ni-camera-compact text-dark opacity-10"></i>
+                                    </div>
+                                    <h5 class="text-white mb-1">{{ $ave->nombre_comun }}</h5>
+                                    <p>{{ $ave->nombre_cientifico }}</p>
+                                </div>
+                            </div>
+                            @endforeach
                         </div>
-                        <h5 class="text-white mb-1">Get started with Argon</h5>
-                        <p>There’s nothing I really wanted to do in life that I wasn’t able to get good at.</p>
-                    </div>
-                    </div>
-                    <div class="carousel-item h-100" style="background-image: url('{{ asset('img/biopng') }}');
-        background-size: cover;">
-                    <div class="carousel-caption d-none d-md-block bottom-0 text-start start-0 ms-5">
-                        <div class="icon icon-shape icon-sm bg-white text-center border-radius-md mb-3">
-                        <i class="ni ni-bulb-61 text-dark opacity-10"></i>
-                        </div>
-                        <h5 class="text-white mb-1">Faster way to create web pages</h5>
-                        <p>That’s my skill. I’m not really specifically talented at anything except for the ability to learn.</p>
-                    </div>
-                    </div>
-                    <div class="carousel-item h-100" style="background-image: url('{{ asset('img/pajaro-3.jpg') }}');
-        background-size: cover;">
-                    <div class="carousel-caption d-none d-md-block bottom-0 text-start start-0 ms-5">
-                        <div class="icon icon-shape icon-sm bg-white text-center border-radius-md mb-3">
-                        <i class="ni ni-trophy text-dark opacity-10"></i>
-                        </div>
-                        <h5 class="text-white mb-1">Share with us your design tips!</h5>
-                        <p>Don’t be afraid to be wrong because you can’t learn anything from a compliment.</p>
-                    </div>
+                        <button class="carousel-control-prev w-5 me-3" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next w-5 me-3" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
                 </div>
-                <button class="carousel-control-prev w-5 me-3" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next w-5 me-3" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-                </div>
             </div>
-            </div>
-        </div>
+
         <div class="row mt-4">
             <div class="col-lg-7 mb-lg-0 mb-4">
                 <div class="card ">
@@ -184,24 +165,24 @@
                                 <td class="w-30">
                                 <div class="d-flex px-2 py-1 align-items-center">
                                     <div>
-                                    <img src="{{ asset('img/pajaro-1.jpg') }}" class="avatar avatar-xl  me-3 ">
+                                    <img src="{{ asset('imagenes/aves/'.$aveMayorAvistamientos->imagen) }}" class="avatar avatar-xl  me-3 ">
                                     </div>
                                     <div class="ms-4">
                                     <p class="text-xs font-weight-bold mb-0">Nombre común:</p>
-                                    <h6 class="text-sm mb-0">Pajaro carpintero</h6>
+                                    <h6 class="text-sm mb-0">{{ $aveMayorAvistamientos->nombre_comun }}</h6>
                                     </div>
                                 </div>
                                 </td>
                                 <td>
-                                <div class="text-center">
+                                <!-- <div class="text-center">
                                     <p class="text-xs font-weight-bold mb-0">Nombre cientifico</p>
-                                    <h6 class="text-sm mb-0">Picidae</h6>
-                                </div>
+                                    <h6 class="text-sm mb-0">{{ $aveMayorAvistamientos->nombre_cientifico }}</h6>
+                                </div> -->
                                 </td>
                                 <td>
                                 <div class="text-center">
                                     <p class="text-xs font-weight-bold mb-0">Avistamientos:</p>
-                                    <h6 class="text-sm mb-0 text-success">230,900</h6>
+                                    <h6 class="text-sm mb-0 text-success">{{ $aveMayorAvistamientos->total_avistamientos }}</h6>
                                 </div>
                                 </td>
                             </tr>
@@ -223,24 +204,24 @@
                                 <td class="w-30">
                                 <div class="d-flex px-2 py-1 align-items-center">
                                     <div>
-                                    <img src="{{ asset('img/pajaro-2.jpg') }}" class="avatar avatar-xl  me-3 ">
+                                    <img src="{{ asset('imagenes/aves/'.$aveMenorAvistamientos->imagen) }}" class="avatar avatar-xl  me-3 ">
                                     </div>
                                     <div class="ms-4">
                                     <p class="text-xs font-weight-bold mb-0">Nombre común:</p>
-                                    <h6 class="text-sm mb-0">Pajaro carpintero</h6>
+                                    <h6 class="text-sm mb-0">{{ $aveMenorAvistamientos->nombre_comun }}</h6>
                                     </div>
                                 </div>
                                 </td>
                                 <td>
-                                <div class="text-center">
+                                <!-- <div class="text-center">
                                     <p class="text-xs font-weight-bold mb-0">Nombre cientifico</p>
-                                    <h6 class="text-sm mb-0">Picidae</h6>
-                                </div>
+                                    <h6 class="text-sm mb-0">{{ $aveMenorAvistamientos->nombre_cientifico }}</h6>
+                                </div> -->
                                 </td>
                                 <td>
                                 <div class="text-center">
                                     <p class="text-xs font-weight-bold mb-0">Avistamientos:</p>
-                                    <h6 class="text-sm mb-0 text-danger">230,900</h6>
+                                    <h6 class="text-sm mb-0 text-danger"> {{ $aveMenorAvistamientos->total_avistamientos }}</h6>
                                 </div>
                                 </td>
                             </tr>

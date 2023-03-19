@@ -108,14 +108,10 @@ class AveController extends Controller
         ->groupBy('area_id')
         ->get();
 
-        // Obtener años distintos de los avistamientos
-        $anios = Avistamiento::select(DB::raw('YEAR(fecha) as year'))
-        ->where('ave_id', $id)
-        ->groupBy('year')
-        ->get();
-
-        return view('aves.show', compact('ave', 'areas', 'avistamientosPorArea', 'anios'));
+    return view('aves.show', compact('ave', 'areas', 'avistamientosPorArea'));
     }
+
+    
 
 
 }
