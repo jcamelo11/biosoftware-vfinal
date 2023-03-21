@@ -30,9 +30,9 @@ Route::get('/aves/{ave}/editar', [AveController::class, 'edit'])->name('aves.edi
 Route::put('/aves/{ave}', [AveController::class, 'update'])->name('aves.update');
 Route::delete('/aves/{ave}', [AveController::class, 'destroy'])->name('aves.destroy');
 Route::get('/aves/{ave}', [AveController::class, 'show'])->name('aves.show');
-
-
 Route::post('/avistamientos', [App\Http\Controllers\AvistamientoController::class, 'store'])->name('avistamientos.store');
+
+Route::get('/perfil', [App\Http\Controllers\PerfilController::class, 'index'])->name('perfil');
 
 
 

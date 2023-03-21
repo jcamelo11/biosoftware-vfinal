@@ -1,5 +1,9 @@
 @extends('layouts.panel')
 
+@section('CSS')
+<link href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
+@endsection
+
 @section('content')
 @include('includes.panel.topnav', ['title' => 'Aves'])
 <div class="container-fluid py-4">
@@ -18,7 +22,7 @@
             </div>
             <div class="card-body px-0 pt-0 pb-2">
               <div class="table-responsive p-0">
-                <table class="table align-items-center justify-content-center mb-0">
+                <table id="aves" class="table align-items-center justify-content-center mb-0">
                     <thead>
                         <tr>
                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder text-center opacity-7">Foto</th>
@@ -50,11 +54,22 @@
                         @endforeach  
                     </tbody>
                 </table>
+                
               </div>
             </div>
-            <div class="card-footer text-muted">
+            <!-- <div class="card-footer text-muted">
               2 days ago
-            </div>
+            </div> -->
+            @section('js')
+                <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+                <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+                <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+                <script>
+                  $(document).ready(function () {
+                      $('#aves').DataTable();
+                  });
+                </script>
+                @endsection
           </div>
         </div>
     </div>

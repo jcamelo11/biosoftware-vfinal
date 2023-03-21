@@ -20,7 +20,7 @@
   <!-- CSS Files -->
   <link id="pagestyle" href="{{ asset('css/argon-dashboard.css?v=2.0.4') }}" rel="stylesheet" />
   <link href="{{ asset('css/dropzone.min.css') }}" rel="stylesheet">
-  //sweetAlrt
+  @yield('CSS')
   
 </head>
 
@@ -122,6 +122,7 @@
   <script src="{{ asset('js/plugins/perfect-scrollbar.min.js') }}"></script>
   <script src="{{ asset('js/plugins/smooth-scrollbar.min.js') }}"></script>
   <script src="{{ asset('js/plugins/chartjs.min.js') }}"></script>
+  @yield('js')
   <script>
        
   var ctx1 = document.getElementById("chart-line").getContext("2d");

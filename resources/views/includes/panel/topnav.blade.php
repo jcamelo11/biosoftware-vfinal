@@ -33,17 +33,17 @@
             <li class="nav-item dropdown pe-2 d-flex align-items-center">
               <a href="javascript:;" class="nav-link text-white p-0" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                 <div class="my-auto">
-                  <img src="{{ asset('img/team-2.jpg') }}" class="avatar avatar-sm ">
+                  <img src="{{ asset('img/pajarito.png') }}" class="avatar avatar-sm ">
                   <span class="font-weight-bold cursor-pointer">{{ auth()->user()->name }}</span>
                 </div>
                  
               </a>
               <ul class="dropdown-menu  dropdown-menu-end  px-2 py-3 me-sm-n4" aria-labelledby="dropdownMenuButton">
                 <li class="mb-2">
-                  <a class="dropdown-item border-radius-md" href="javascript:;">
+                  <a class="dropdown-item border-radius-md" href="{{ route('perfil') }}">
                     <div class="d-flex py-1">
                       <div class="my-auto">
-                        <img src="{{ asset('img/team-2.jpg') }}" class="avatar avatar-sm  me-3 ">
+                        <img src="{{ asset('img/pajarito.png') }}" class="avatar avatar-sm  me-3 ">
                       </div>
                       <div class="d-flex flex-column justify-content-center">
                         <h6 class="text-sm font-weight-normal mb-1">

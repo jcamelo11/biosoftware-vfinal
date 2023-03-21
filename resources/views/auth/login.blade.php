@@ -15,24 +15,26 @@
                   <p class="mb-0">Ingrese su correo electrónico y contraseña para iniciar sesión</p>
                 </div>
                 <div class="card-body">
-
-                  @if ($errors->any())
-
-                      <div class="alert alert-danger text-white" role="alert">
-                        {{ $errors->first() }}
-                      </div>
-
-                  @endif
-                  
                   <form role="form" method="POST" action="{{ route('login') }}">
                     @csrf
 
                     <div class="mb-3">
-                      <input type="email" class="form-control form-control-lg" placeholder="Email" aria-label="Email" id="email" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                      <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="email@example" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                      @error('email')
+                          <span class="invalid-feedback" role="alert">
+                              <strong>{{ $message }}</strong>
+                          </span>
+                      @enderror
                     </div>
 
                     <div class="mb-3">
-                      <input type="password" class="form-control form-control-lg" placeholder="Password" aria-label="Password" id="password"name="password" required autocomplete="current-password">
+                      <input id="password" placeholder="Conreaseña" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+
+                      @error('password')
+                          <span class="invalid-feedback" role="alert">
+                              <strong>{{ $message }}</strong>
+                          </span>
+                      @enderror
                     </div>
 
                     <div class="form-check form-switch">
@@ -49,10 +51,10 @@
                     ¿Olvidaste tu contraseña?
                     <a href="{{ route('password.request') }}" class="text-success text-gradient font-weight-bold">Recuperar</a>
                   </p>
-                  <p class="mb-4 text-sm mx-auto">
+                  <!-- <p class="mb-4 text-sm mx-auto">
                     ¿No tienes una cuenta?
                     <a href="{{ route('register') }}" class="text-success text-gradient font-weight-bold">Regístrese</a>
-                  </p>
+                  </p> -->
                 </div>
               </div>
             </div>
