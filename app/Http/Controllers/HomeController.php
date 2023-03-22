@@ -48,11 +48,13 @@ class HomeController extends Controller
             ->orderBy('total_avistamientos', 'asc')
             ->first();
 
-       
-            
-
-
-        return view('home', compact('userCount', 'aveCount', 'avistamientosTotales', 'aves', 'aveMayorAvistamientos', 'aveMenorAvistamientos'));
+        $datosMapa = DB::table('avistamientos')
+            ->join('areas', 'avistamientos.area_id', '=', 'areas.id')
+            ->select('areas.lat', 'areas.log', DB::raw('count(*) as total'))
+            ->groupBy('areas.lat', 'areas.log')
+            ->get();
+        
+        return view('home', compact('datosMapa', 'userCount', 'aveCount', 'avistamientosTotales', 'aves', 'aveMayorAvistamientos', 'aveMenorAvistamientos'));
     }
 
     

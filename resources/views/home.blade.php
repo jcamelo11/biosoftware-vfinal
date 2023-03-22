@@ -2,8 +2,13 @@
 
 @section('content')
 @include('includes.panel.topnav', ['title' => 'Dashboard'])
+
+    @section('CSS')
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css' rel='stylesheet' />
+    @endsection
+
     <div class="row">
-        
         <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
             <div class="card">
                 <div class="card-body p-3">
@@ -333,7 +338,43 @@
                 </div>
             </div>
         </div>
+        <div class="row my-4">
+            <div class="col-14 mx-auto">
+                
+                <div class="card" id="map" style="height: 400px; boder-radius: 30px;"></div>
+                
+            </div>
+        </div>
     </div>
+
+    @section('js')
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoiamNhbWVsbzYyNSIsImEiOiJjbGR1enBwM24wNXRyM29ubzBjZmY5aXdvIn0.hzI9ZFtUSUhqIm_dWoSJrg';
+    
+
+        // var map = new mapboxgl.Map({
+        //     container: 'map',
+        //     style: 'mapbox://styles/jcamelo625/clemt2qhk000601s4prht0a9e',
+        //     center: [-74.08175, 4.60971],
+        //     zoom: 10
+        // });
+        var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/jcamelo625/clemt2qhk000601s4prht0a9e',
+        center: [-74.5, 40],
+        zoom: 6
+        });
+       
+        var marker = new mapboxgl.Marker() //Agregando el marcador al mapa
+			.setLngLat([-73.235118, 10.403120]) //Longitud y latitud del marcador
+			.addTo(map);
+
+            var marker = new mapboxgl.Marker() //Agregando el marcador al mapa
+			.setLngLat([-73.235118, 10.403120]) //Longitud y latitud del marcador
+			.addTo(map);
+       
+    </script>
+@endsection
 
     
 @endsection

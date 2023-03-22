@@ -50,7 +50,9 @@ class AveController extends Controller
 
         $ave->save();
 
-        return redirect()->route('aves');
+        $notificacion = "Se ha registrado correctamente";
+
+        return redirect()->route('aves')->with(compact('notificacion'));
     }
 
     // public function edit(Ave $ave){
@@ -93,7 +95,9 @@ class AveController extends Controller
         $ave->avistamientos()->delete();
         $ave->delete();
 
-        return redirect()->route('aves');
+        $notificacion = "Se ha eliminado el registro con éxito";
+
+        return redirect()->route('aves')->with(compact('notificacion'));
     }
 
     public function show($id)

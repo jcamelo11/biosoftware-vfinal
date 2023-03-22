@@ -29,7 +29,9 @@ class AvistamientoController extends Controller
         // Guardamos el nuevo avistamiento en la base de datos
         $avistamiento->save();
 
+        $notificacion = "Se ha registrado el avistamiento correctamente";
+
         // Redirigimos de vuelta a la vista show de la ave
-        return redirect()->route('aves.show', $avistamiento->ave_id);
+        return redirect()->route('aves.show', $avistamiento->ave_id)->with(compact('notificacion'));
     }
 }

@@ -18,9 +18,19 @@
                   <div class="col-6 text-end">
                   <a class="btn btn-success mb-0" href="{{ route('aves.create') }}"><i class="fas fa-plus"></i>&nbsp;&nbsp;Nueva Ave</a>
                   </div>
+                  @if(session('notificacion'))
+                    <div class="alert alert-success alert-dismissible fade show text-white mt-3" role="alert">
+                        <span class="alert-icon"><i class="ni ni-like-2"></i></span>
+                        {{ session('notificacion')}}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                  @endif
                 </div>
             </div>
-            <div class="card-body px-0 pt-0 pb-2">
+            <div class="card-body">
+              
               <div class="table-responsive p-0">
                 <table id="aves" class="table align-items-center justify-content-center mb-0">
                     <thead>
@@ -69,6 +79,7 @@
                       $('#aves').DataTable();
                   });
                 </script>
+                 
                 @endsection
           </div>
         </div>
