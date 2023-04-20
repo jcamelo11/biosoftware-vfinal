@@ -1,3 +1,10 @@
+@auth
+  @php
+    $user = auth()->user();
+  @endphp
+@endauth
+
+
 <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl " id="navbarBlur" data-scroll="false">
       <div class="container-fluid py-1 px-3">
         <nav aria-label="breadcrumb">
@@ -10,10 +17,11 @@
         <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
           <div class="ms-md-auto pe-md-3 d-flex align-items-center">
             <div class="input-group">
-              <span class="input-group-text text-body"><i class="fas fa-search" aria-hidden="true"></i></span>
-              <input type="text" class="form-control" placeholder="Type here...">
+              <!-- <span class="input-group-text text-body"><i class="fas fa-search" aria-hidden="true"></i></span>
+              <input type="text" class="form-control" placeholder="Type here..."> -->
             </div>
           </div>
+          
           <ul class="navbar-nav  justify-content-end">
            
             <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
@@ -25,30 +33,53 @@
                 </div>
               </a>
             </li>
-            <li class="nav-item px-3 d-flex align-items-center">
+            <!-- <li class="nav-item px-3 d-flex align-items-center">
               <a href="javascript:;" class="nav-link text-white p-0">
                 <i class="fas fa-bell fixed-plugin-button-nav cursor-pointer"></i>
               </a>
-            </li>
+            </li> -->
             <li class="nav-item dropdown pe-2 d-flex align-items-center">
               <a href="javascript:;" class="nav-link text-white p-0" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                 <div class="my-auto">
-                  <img src="{{ asset('img/pajarito.png') }}" class="avatar avatar-sm ">
+                  @if ($user->imagen)
+                    <img src="{{ asset('imagenes/avatars/' . $user->imagen) }}" class="avatar avatar-sm">
+                  @else
+                    <img src="{{ asset('imagenes/avatars/user.jpg') }}" class="avatar avatar-sm">
+                  @endif
+                  
                   <span class="font-weight-bold cursor-pointer">{{ auth()->user()->name }}</span>
                 </div>
                  
               </a>
               <ul class="dropdown-menu  dropdown-menu-end  px-2 py-3 me-sm-n4" aria-labelledby="dropdownMenuButton">
-                <li class="mb-2">
+                <!-- <li class="mb-2">
                   <a class="dropdown-item border-radius-md" href="{{ route('perfil') }}">
                     <div class="d-flex py-1">
                       <div class="my-auto">
-                        <img src="{{ asset('img/pajarito.png') }}" class="avatar avatar-sm  me-3 ">
+                        <img src="" class="avatar avatar-sm  me-3 ">
                       </div>
                       <div class="d-flex flex-column justify-content-center">
                         <h6 class="text-sm font-weight-normal mb-1">
                           <span class="font-weight-bold cursor-pointer">Perfil</span> 
                           
+                        </h6>
+                      </div>
+                    </div>
+                  </a>
+                </li> -->
+                <li class="mb-2">
+                  <a class="dropdown-item border-radius-md" href="{{ route('perfil') }}">
+                    <div class="d-flex py-1">
+                      <div class="my-auto">
+                        @if ($user->imagen)
+                          <img src="{{ asset('imagenes/avatars/' . $user->imagen) }}" class="avatar avatar-sm me-3">
+                        @else
+                          <img src="{{ asset('imagenes/avatars/user.jpg') }}" class="avatar avatar-sm me-3">
+                        @endif
+                      </div>
+                      <div class="d-flex flex-column justify-content-center">
+                        <h6 class="text-sm font-weight-normal mb-1">
+                          <span class="font-weight-bold cursor-pointer">Perfil</span> 
                         </h6>
                       </div>
                     </div>

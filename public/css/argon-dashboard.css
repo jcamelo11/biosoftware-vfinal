@@ -27,7 +27,7 @@
   --bs-gray-700: #495057;
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
-  --bs-primary: #2dce89;
+  --bs-primary: #5e72e4;
   --bs-secondary: #8392ab;
   --bs-success: #2dce89;
   --bs-info: #11cdef;
@@ -3009,11 +3009,11 @@ textarea.form-control-lg {
 }
 
 .form-check-input:checked[type="checkbox"] {
-  background-image: linear-gradient(310deg, #2dce89 0%, #81E6D9 100%);
+  background-image: linear-gradient(310deg, #2dce89 0%, #825ee4 100%);
 }
 
 .form-check-input:checked[type="radio"] {
-  background-image: linear-gradient(310deg, #2dce89 0%, #81E6D9 100%);
+  background-image: linear-gradient(310deg, #2dce89 0%, #825ee4 100%);
 }
 
 .form-check-input[type="checkbox"]:indeterminate {
@@ -3661,8 +3661,8 @@ fieldset:disabled .btn {
 
 .btn-primary {
   --bs-btn-color: #000;
-  --bs-btn-bg: #2dce89;
-  --bs-btn-border-color: #2dce89;
+  --bs-btn-bg: #5e72e4;
+  --bs-btn-border-color: #5e72e4;
   --bs-btn-hover-color: #000;
   --bs-btn-hover-bg: #7687e8;
   --bs-btn-hover-border-color: #6e80e7;
@@ -3672,8 +3672,8 @@ fieldset:disabled .btn {
   --bs-btn-active-border-color: #6e80e7;
   --bs-btn-active-shadow: none;
   --bs-btn-disabled-color: #000;
-  --bs-btn-disabled-bg: #2dce89;
-  --bs-btn-disabled-border-color: #2dce89;
+  --bs-btn-disabled-bg: #5e72e4;
+  --bs-btn-disabled-border-color: #5e72e4;
 }
 
 .btn-secondary {
@@ -20895,7 +20895,9 @@ fieldset:disabled .btn {
   height: 100%;
   position: absolute;
   border-radius: 1rem;
+ 
 }
+
 
 .card.card-background .card-body {
   color: #fff;
@@ -20944,7 +20946,7 @@ fieldset:disabled .btn {
 
 .card.card-background.card-background-mask-primary:after {
   background-image: linear-gradient(310deg, #2dce89 0%, #825ee4 100%);
-  opacity: .85;
+  opacity: 1;
 }
 
 .card.card-background.card-background-mask-secondary:before {
@@ -20953,7 +20955,7 @@ fieldset:disabled .btn {
 
 .card.card-background.card-background-mask-secondary:after {
   background-image: linear-gradient(310deg, #627594 0%, #a8b8d8 100%);
-  opacity: .85;
+  opacity: 1;
 }
 
 .card.card-background.card-background-mask-success:before {
@@ -20962,7 +20964,7 @@ fieldset:disabled .btn {
 
 .card.card-background.card-background-mask-success:after {
   background-image: linear-gradient(310deg, #2dce89 0%, #2dcecc 100%);
-  opacity: .85;
+  opacity: 1;
 }
 
 .card.card-background.card-background-mask-info:before {
@@ -20971,7 +20973,7 @@ fieldset:disabled .btn {
 
 .card.card-background.card-background-mask-info:after {
   background-image: linear-gradient(310deg, #1171ef 0%, #11cdef 100%);
-  opacity: .85;
+  opacity: 1;
 }
 
 .card.card-background.card-background-mask-warning:before {
@@ -20980,7 +20982,7 @@ fieldset:disabled .btn {
 
 .card.card-background.card-background-mask-warning:after {
   background-image: linear-gradient(310deg, #fb6340 0%, #fbb140 100%);
-  opacity: .85;
+  opacity: 1;
 }
 
 .card.card-background.card-background-mask-danger:before {
@@ -20989,7 +20991,7 @@ fieldset:disabled .btn {
 
 .card.card-background.card-background-mask-danger:after {
   background-image: linear-gradient(310deg, #f5365c 0%, #f56036 100%);
-  opacity: .85;
+  opacity: 1;
 }
 
 .card.card-background.card-background-mask-light:before {
@@ -20998,7 +21000,7 @@ fieldset:disabled .btn {
 
 .card.card-background.card-background-mask-light:after {
   background-image: linear-gradient(310deg, #CED4DA 0%, #EBEFF4 100%);
-  opacity: .85;
+  opacity: 1;
 }
 
 .card.card-background.card-background-mask-dark:before {
@@ -21007,7 +21009,7 @@ fieldset:disabled .btn {
 
 .card.card-background.card-background-mask-dark:after {
   background-image: linear-gradient(310deg, #212229 0%, #212529 100%);
-  opacity: .85;
+  opacity: 1;
 }
 
 .card.card-background .card-category {

@@ -79,7 +79,7 @@
                 @csrf
 
                 <div class="mb-3">
-                  <input type="text" class="form-control" placeholder="Nombre y Apellido" aria-label="Name" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                  <input type="text" class="form-control" placeholder="Nombre" aria-label="Name" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
                 </div>
 
                 <div class="mb-3">

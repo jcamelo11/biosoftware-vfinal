@@ -11,7 +11,7 @@
             <div class="col-xl-4 col-lg-5 col-md-7 d-flex flex-column mx-lg-0 mx-auto">
               <div class="card card-plain">
                 <div class="card-header pb-0 text-start">
-                  <h4 class="font-weight-bolder">iniciar sesión</h4>
+                  <h4 class="font-weight-bolder">Iniciar sesión</h4>
                   <p class="mb-0">Ingrese su correo electrónico y contraseña para iniciar sesión</p>
                 </div>
                 <div class="card-body">
@@ -19,7 +19,7 @@
                     @csrf
 
                     <div class="mb-3">
-                      <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="email@example" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                      <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="Correo electrónico" value="{{ old('email') }}" required autocomplete="email" autofocus>
                       @error('email')
                           <span class="invalid-feedback" role="alert">
                               <strong>{{ $message }}</strong>
@@ -28,7 +28,7 @@
                     </div>
 
                     <div class="mb-3">
-                      <input id="password" placeholder="Conreaseña" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                      <input id="password" placeholder="Contraseña" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
                       @error('password')
                           <span class="invalid-feedback" role="alert">
@@ -59,11 +59,11 @@
               </div>
             </div>
             <div class="col-6 d-lg-flex d-none h-100 my-auto pe-0 position-absolute top-0 end-0 text-center justify-content-center flex-column">
-              <div class="position-relative bg-gradient-success h-100 m-3 px-7 border-radius-lg d-flex flex-column justify-content-center overflow-hidden" style="background-image: url('{{ asset('img/bio.png') }}');
+              <div class="position-relative bg-gradient-success h-100 m-3 px-7 border-radius-lg d-flex flex-column justify-content-center overflow-hidden" style="background-image: url('{{ asset('img/ave.jpg') }}');
           background-size: cover;">
-                <span class="mask bg-gradient-success opacity-2"></span>
+                <span class="mask bg-gradient-success opacity-1"></span>
                 <h4 class="mt-5 text-white font-weight-bolder position-relative">"Descubre el canto de la naturaleza en un clic"</h4>
-                <p class="text-white position-relative">The more effortless the writing looks, the more effort the writer actually put into the process.</p>
+                
               </div>
             </div>
           </div>
